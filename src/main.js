@@ -12,6 +12,7 @@ const KM_TO_MI = 0.621371;
 async function init() {
 	const widget = new Widget(Gradient.fromBaseColor3(new Color3(0, 32, 91)));
 	const body = widget.addStack("Body");
+	body.object.url = "https://dining.rice.edu/";
 	body.vertical();
 
 	const title = body.addLabel("TitleLabel", "Whoose Open? 🦉");
@@ -348,13 +349,10 @@ async function init() {
 	};
 
 	const getNextOpenTime = (location) => {
-		const { isOpen, topic } = isLocationOpen(location);
-		if (isOpen) {
-			return topic;
-		}
+		const { topic } = isLocationOpen(location);
 
 		for (const time of location.times) {
-			if (!time.days.includes(today)) {
+			if (!time.days.includes(today) || time.topic === topic) {
 				continue;
 			}
 
@@ -434,11 +432,18 @@ async function init() {
 		const distance = location.distance
 			? `(${location.distance.toFixed(2)} ${USE_LOCATION === "metric" ? "km" : "mi"})`
 			: "";
-		const status = isNearClosing
-			? `CLOSES ${closingTime}`
+		let status = isNearClosing
+			? `Closes at ${closingTime}`
 			: isOpen
 				? "OPEN"
 				: "CLOSED";
+		console.log(nextStartTime);
+		console.log(closingTime);
+		console.log(nextStartTime === closingTime);
+		if (isNearClosing && nextStartTime === closingTime) {
+			status = `${nextTopic} at ${nextStartTime}`;
+		}
+
 		topic = isOpen
 			? `${topic}, `
 			: nextTopic
@@ -469,7 +474,7 @@ async function init() {
 	}
 
 	widget.addFooter(
-		`Last updated at ${new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit", hour12: true })}`,
+		`Last updated at ${now.toLocaleTimeString([], { hour: "numeric", minute: "2-digit", hour12: true })}`,
 	);
 
 	await widget.show("Medium", true);

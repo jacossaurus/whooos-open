@@ -459,6 +459,7 @@ const KM_TO_MI = 0.621371;
 async function init() {
 	const widget = new Widget(Gradient.fromBaseColor3(new Color3(0, 32, 91)));
 	const body = widget.addStack("Body");
+	body.object.url = "https://dining.rice.edu/";
 	body.vertical();
 
 	const title = body.addLabel("TitleLabel", "Whoose Open? 🦉");
