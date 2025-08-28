@@ -9,7 +9,7 @@ Requires <a href="https://scriptable.app/">Scriptable</a> on the App Store.
 
 ## Instructions
 - Open Scriptable and tap the plus icon.
-- Copy the text in `widget.js` (found in `build` of this repo) and paste into the script.
+- Copy the text in <a href="/main/build/widget.js">widget.js</a> (found in `build` of this repo) and paste into the script.
 - Go to your Home Screen, hold down, and add a widget.
 - Select Scriptable as the application.
 - Select the Medium size.
