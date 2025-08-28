@@ -1,0 +1,16 @@
+{
+	"name": "whoose-open",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "zsh build.sh"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"packageManager": "pnpm@10.15.0",
+	"dependencies": {
+		"@types/scriptable-ios": "^1.7.8"
+	}
+}

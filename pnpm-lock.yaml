@@ -1,0 +1,22 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@types/scriptable-ios':
+        specifier: ^1.7.8
+        version: 1.7.8
+
+packages:
+
+  '@types/scriptable-ios@1.7.8':
+    resolution: {integrity: sha512-bPrNvdcZ/slH/rhdIlLfzXEug1pm3JHApcVuet7UchvHGFHZ8mWzfnuTB7wJKLq+eeC4gZ4QgHDKYJxrwkHOgw==}
+
+snapshots:
+
+  '@types/scriptable-ios@1.7.8': {}
