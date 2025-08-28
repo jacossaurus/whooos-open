@@ -5,7 +5,7 @@ A widget to quickly see servery hours on campus at Rice University.
 
 <b>Note</b>: the hours have been hardcoded, meaning any changes to their regular hours will <b>NOT</b> be shown.
 
-Requires <a href="https://scriptable.app/">Scriptable</a> on the App Store.
+Requires <a href="https://scriptable.app/" target="_blank">Scriptable</a> on the App Store.
 
 ## Instructions
 - Open Scriptable and tap the plus icon.
