@@ -852,8 +852,6 @@ async function init() {
 
 				return a.distance - b.distance;
 			});
-
-			console.log("Sorted by location!");
 		} catch (err) {
 			console.warn(`Failed to get location. ${err}`);
 		}
@@ -884,9 +882,7 @@ async function init() {
 			: isOpen
 				? "OPEN"
 				: "CLOSED";
-		console.log(nextStartTime);
-		console.log(closingTime);
-		console.log(nextStartTime === closingTime);
+
 		if (isNearClosing && nextStartTime === closingTime) {
 			status = `${nextTopic} at ${nextStartTime}`;
 		}
