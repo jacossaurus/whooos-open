@@ -1,6 +1,6 @@
 // ------------------------------------------- \\
 // ---------- Written by Jacob King ---------- \\
-// --- Repositories on GitHub @Jacossaurus --- \\
+// --- Repositories on GitHub @jacossaurus --- \\
 // ------------------------------------------- \\
 // ---------------- Framework ---------------- \\
 // ------------------------------------------- \\
@@ -796,13 +796,10 @@ async function init() {
 	};
 
 	const getNextOpenTime = (location) => {
-		const { isOpen, topic } = isLocationOpen(location);
-		if (isOpen) {
-			return topic;
-		}
+		const { topic } = isLocationOpen(location);
 
 		for (const time of location.times) {
-			if (!time.days.includes(today)) {
+			if (!time.days.includes(today) || time.topic === topic) {
 				continue;
 			}
 
@@ -882,11 +879,18 @@ async function init() {
 		const distance = location.distance
 			? `(${location.distance.toFixed(2)} ${USE_LOCATION === "metric" ? "km" : "mi"})`
 			: "";
-		const status = isNearClosing
-			? `CLOSES ${closingTime}`
+		let status = isNearClosing
+			? `Closes at ${closingTime}`
 			: isOpen
 				? "OPEN"
 				: "CLOSED";
+		console.log(nextStartTime);
+		console.log(closingTime);
+		console.log(nextStartTime === closingTime);
+		if (isNearClosing && nextStartTime === closingTime) {
+			status = `${nextTopic} at ${nextStartTime}`;
+		}
+
 		topic = isOpen
 			? `${topic}, `
 			: nextTopic
@@ -917,7 +921,7 @@ async function init() {
 	}
 
 	widget.addFooter(
-		`Last updated at ${new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit", hour12: true })}`,
+		`Last updated at ${now.toLocaleTimeString([], { hour: "numeric", minute: "2-digit", hour12: true })}`,
 	);
 
 	await widget.show("Medium", true);
