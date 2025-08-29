@@ -3,7 +3,7 @@ A widget to quickly see servery hours on campus at Rice University.
 
 ![Preview](assets/preview.jpg)
 
-<b>Note</b>: the hours are currently pulled from my website, which is updated manually by me. There is no guarantee I will update these hours consistently if there are changes (due to holidays, events, etc.). Please check Rice Dining for concurrent hours.
+<b>Note</b>: the hours are currently pulled from my website, which is updated manually by me. There is no guarantee I will update these hours consistently if there are changes (due to holidays, events, etc.). Please check Rice Dining for current hours.
 
 Requires <a href="https://scriptable.app/">Scriptable</a> on the App Store.
 
