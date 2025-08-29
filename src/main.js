@@ -16,6 +16,7 @@ async function init() {
 	body.vertical();
 
 	const title = body.addLabel("TitleLabel", "Whooo's Open? 🦉");
+	title.object.centerAlignText();
 	title.font = Font.boldSystemFont(16);
 
 	const locations = [
@@ -47,7 +48,7 @@ async function init() {
 					days: ["Monday", "Tuesday", "Wednesday", "Thursday"],
 					start: "20:00",
 					end: "22:00",
-					topic: "Late Night Dining",
+					topic: "Night Dining",
 				},
 			],
 		},
