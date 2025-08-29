@@ -1,7 +1,7 @@
 # Whooo's Open? 🦉 (iOS and iPadOS Widget)
 A widget to quickly see servery hours on campus at Rice University.
 
-![Preview](assets/preview.jpgg)
+![Preview](assets/preview.jpg)
 
 <b>Note</b>: the hours have been hardcoded, meaning any changes to their regular hours will <b>NOT</b> be shown.
 
