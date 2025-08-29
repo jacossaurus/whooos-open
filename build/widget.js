@@ -745,10 +745,22 @@ async function init() {
 	title.object.centerAlignText();
 	title.font = Font.boldSystemFont(16);
 
-	const { locations, version } =
-		(await fetch("https://mrking.dev/whooos-open/data.json").catch((err) =>
-			console.warn(`Failed to get servery hours. ${err}`),
-		)) ?? DEFAULT_LOCATIONS;
+	let { locations, version } = DEFAULT_LOCATIONS.data;
+
+	try {
+		const { data } = await fetch(
+			"https://mrking.dev/whooos-open/data.json",
+		).catch((err) => console.warn(`Failed to get servery hours. ${err}`));
+
+		if (data.locations && data.version) {
+			locations = data.locations;
+			version = data.version;
+		} else {
+			console.warn("Malformed data from server.", data);
+		}
+	} catch (err) {
+		console.warn(`Failed to get servery hours. ${err}`);
+	}
 
 	const red = new Color3(200, 50, 50);
 	const green = new Color3(50, 200, 50);
