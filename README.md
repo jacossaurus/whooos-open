@@ -1,4 +1,4 @@
-# Whoose Open? 🦉 (iOS and iPadOS Widget)
+# Whooo's Open? 🦉 (iOS and iPadOS Widget)
 A widget to quickly see servery hours on campus at Rice University.
 
 ![Preview](assets/preview.jpg)

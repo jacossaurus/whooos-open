@@ -462,7 +462,7 @@ async function init() {
 	body.object.url = "https://dining.rice.edu/";
 	body.vertical();
 
-	const title = body.addLabel("TitleLabel", "Whoose Open? 🦉");
+	const title = body.addLabel("TitleLabel", "Whooo's Open? 🦉");
 	title.font = Font.boldSystemFont(16);
 
 	const locations = [
