@@ -142,6 +142,24 @@ class Stack extends Object {
 		return new Stack(name, this);
 	}
 
+	addFooter(text) {
+		this.addSpacer();
+
+		const stack = this.addStack("FooterStack");
+		stack.horizontal();
+		stack.addSpacer();
+
+		const footer = stack.addLabel(
+			"Footer",
+			text ?? `Made by The King - v${King._VERSION}`,
+		);
+
+		footer.font = Font.lightSystemFont(12);
+		stack.addSpacer();
+
+		return footer;
+	}
+
 	addClass(className, properties) {
 		this.classes[className] = properties;
 	}
@@ -208,20 +226,6 @@ class Widget extends Stack {
 
 			this.object[`present${size}`]();
 		}
-	}
-
-	addFooter(text) {
-		this.addSpacer();
-
-		const footer = this.addLabel(
-			"Footer",
-			text ?? `Made by The King - v${King._VERSION}`,
-		);
-
-		footer.font = Font.lightSystemFont(12);
-		footer.object.centerAlignText();
-
-		return footer;
 	}
 
 	async createTransparentBackground(isReal, widgetSize) {
@@ -942,12 +946,12 @@ async function init() {
 		statusLabel.color = isNearClosing ? orange : isOpen ? green : red;
 	}
 
-	widget.addFooter(
+	body.addFooter(
 		`Updated at ${now.toLocaleTimeString([], { hour: "numeric", minute: "2-digit", hour12: true })}`,
 	);
 
 	if (King._VERSION !== version) {
-		widget.addFooter("Please update this widget by tapping it!");
+		body.addFooter("Please update this widget by tapping it!");
 		body.object.url = "https://github.com/jacossaurus/whooos-open";
 	}
 

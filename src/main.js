@@ -218,12 +218,12 @@ async function init() {
 		statusLabel.color = isNearClosing ? orange : isOpen ? green : red;
 	}
 
-	widget.addFooter(
+	body.addFooter(
 		`Updated at ${now.toLocaleTimeString([], { hour: "numeric", minute: "2-digit", hour12: true })}`,
 	);
 
 	if (King._VERSION !== version) {
-		widget.addFooter("Please update this widget by tapping it!");
+		body.addFooter("Please update this widget by tapping it!");
 		body.object.url = "https://github.com/jacossaurus/whooos-open";
 	}
 
