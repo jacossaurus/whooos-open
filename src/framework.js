@@ -4,6 +4,8 @@
 // ------------------------------------------- \\
 // ---------------- Framework ---------------- \\
 // ------------------------------------------- \\
+// ---- Update by visiting the GitHub repo --- \\
+//  https://github.com/jacossaurus/whooos-open \\
 
 // Classes
 class KingFramework {
