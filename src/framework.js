@@ -8,7 +8,7 @@
 // Classes
 class KingFramework {
 	constructor() {
-		this._VERSION = "1.2.2";
+		this._VERSION = "1.2.3";
 
 		this.Widget = Widget;
 		this.Vector3 = Vector3;

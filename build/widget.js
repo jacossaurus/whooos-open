@@ -8,7 +8,7 @@
 // Classes
 class KingFramework {
 	constructor() {
-		this._VERSION = "1.2.2";
+		this._VERSION = "1.2.3";
 
 		this.Widget = Widget;
 		this.Vector3 = Vector3;
@@ -766,17 +766,17 @@ async function init() {
 	const green = new Color3(50, 200, 50);
 	const orange = new Color3(255, 150, 0);
 	const days = [
+		"Sunday",
 		"Monday",
 		"Tuesday",
 		"Wednesday",
 		"Thursday",
 		"Friday",
 		"Saturday",
-		"Sunday",
 	];
 	const now = new Date();
 
-	const today = days[now.getDay() - 1];
+	const today = days[now.getDay()];
 	const hour = now.getHours();
 	const minute = now.getMinutes();
 
