@@ -25,13 +25,6 @@ const DEFAULT_LOCATIONS = {
 						end: "20:00",
 						topic: "Dinner",
 					},
-					// MONDAY - THURSDAY
-					{
-						days: ["Monday", "Tuesday", "Wednesday", "Thursday"],
-						start: "20:00",
-						end: "22:00",
-						topic: "Late Night Dining",
-					},
 				],
 			},
 			{
@@ -244,6 +237,13 @@ const DEFAULT_LOCATIONS = {
 						start: "17:30",
 						end: "21:00",
 						topic: "Extended Dinner",
+					},
+					// MONDAY - THURSDAY
+					{
+						days: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+						start: "20:00",
+						end: "22:00",
+						topic: "Late Night Dining",
 					},
 					// SATURDAY
 					{
