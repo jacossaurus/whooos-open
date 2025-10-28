@@ -513,8 +513,8 @@ const DEFAULT_LOCATIONS = {
 					// MONDAY - THURSDAY
 					{
 						days: ["Monday", "Tuesday", "Wednesday", "Thursday"],
-						start: "17:00",
-						end: "20:00",
+						start: "17:30",
+						end: "21:00",
 						topic: "Dinner",
 					},
 					// SUNDAY
@@ -692,18 +692,25 @@ const DEFAULT_LOCATIONS = {
 						end: "17:00",
 						topic: "Snack Period",
 					},
-					{
-						days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-						start: "17:30",
-						end: "21:00",
-						topic: "Extended Dinner",
-					},
 					// MONDAY - THURSDAY
 					{
 						days: ["Monday", "Tuesday", "Wednesday", "Thursday"],
-						start: "20:00",
-						end: "22:00",
+						start: "17:00",
+						end: "20:00",
+						topic: "Dinner",
+					},
+					{
+						days: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+						start: "21:00",
+						end: "23:00",
 						topic: "Late Night Dining",
+					},
+					// FRIDAY
+					{
+						days: ["Friday"],
+						start: "17:00",
+						end: "21:00",
+						topic: "Dinner",
 					},
 					// SATURDAY
 					{
