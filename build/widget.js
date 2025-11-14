@@ -695,7 +695,7 @@ const DEFAULT_LOCATIONS = {
 					// MONDAY - THURSDAY
 					{
 						days: ["Monday", "Tuesday", "Wednesday", "Thursday"],
-						start: "17:00",
+						start: "17:30",
 						end: "20:00",
 						topic: "Dinner",
 					},
@@ -708,7 +708,7 @@ const DEFAULT_LOCATIONS = {
 					// FRIDAY
 					{
 						days: ["Friday"],
-						start: "17:00",
+						start: "17:30",
 						end: "21:00",
 						topic: "Dinner",
 					},
