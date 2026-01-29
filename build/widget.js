@@ -671,8 +671,8 @@ const DEFAULT_LOCATIONS = {
 					{
 						days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
 						start: "07:30",
-						end: "10:00",
-						topic: "Enhanced Breakfast",
+						end: "10:30",
+						topic: "Breakfast",
 					},
 					{
 						days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
