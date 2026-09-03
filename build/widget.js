@@ -466,7 +466,6 @@ const DEFAULT_LOCATIONS = {
 				name: "Baker Servery",
 				coords: { lat: 29.7170817, lon: -95.3994398 },
 				times: [
-					// MONDAY - FRIDAY
 					{
 						days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
 						start: "07:30",
@@ -491,18 +490,17 @@ const DEFAULT_LOCATIONS = {
 				name: "North Servery",
 				coords: { lat: 29.7219126, lon: -95.3967242 },
 				times: [
-					// MONDAY - FRIDAY
 					{
 						days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
 						start: "07:30",
 						end: "10:00",
-						topic: "Enhanced Breakfast",
+						topic: "Breakfast",
 					},
 					{
 						days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
 						start: "10:00",
 						end: "11:00",
-						topic: "Snack Period",
+						topic: "Snack",
 					},
 					{
 						days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -510,34 +508,38 @@ const DEFAULT_LOCATIONS = {
 						end: "14:00",
 						topic: "Lunch",
 					},
-					// MONDAY - THURSDAY
 					{
-						days: ["Monday", "Tuesday", "Wednesday", "Thursday"],
-						start: "17:00",
+						days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+						start: "16:00",
+						end: "17:00",
+						topic: "Snack",
+					},
+					{
+						days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+						start: "17:30",
 						end: "21:00",
 						topic: "Dinner",
 					},
-					// SUNDAY
 					{
-						days: ["Sunday"],
+						days: ["Saturday"],
 						start: "08:00",
 						end: "11:00",
 						topic: "Breakfast",
 					},
 					{
-						days: ["Sunday"],
+						days: ["Saturday"],
 						start: "11:30",
 						end: "14:00",
 						topic: "Lunch",
 					},
 					{
-						days: ["Sunday"],
+						days: ["Saturday"],
 						start: "15:00",
 						end: "17:00",
 						topic: "Munch",
 					},
 					{
-						days: ["Sunday"],
+						days: ["Saturday"],
 						start: "17:30",
 						end: "20:30",
 						topic: "Dinner",
@@ -548,18 +550,17 @@ const DEFAULT_LOCATIONS = {
 				name: "Seibel Servery",
 				coords: { lat: 29.715998, lon: -95.3984725 },
 				times: [
-					// MONDAY - FRIDAY
 					{
 						days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
 						start: "07:30",
 						end: "10:00",
-						topic: "Enhanced Breakfast",
+						topic: "Breakfast",
 					},
 					{
 						days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
 						start: "10:00",
 						end: "11:00",
-						topic: "Snack Period",
+						topic: "Snack",
 					},
 					{
 						days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -567,14 +568,18 @@ const DEFAULT_LOCATIONS = {
 						end: "14:00",
 						topic: "Lunch",
 					},
-					// MONDAY - THURSDAY
 					{
 						days: ["Monday", "Tuesday", "Wednesday", "Thursday"],
-						start: "17:00",
+						start: "17:30",
 						end: "20:00",
 						topic: "Dinner",
 					},
-					// SUNDAY
+					{
+						days: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+						start: "21:00",
+						end: "23:00",
+						topic: "Late Night Dinner",
+					},
 					{
 						days: ["Sunday"],
 						start: "08:00",
@@ -605,7 +610,6 @@ const DEFAULT_LOCATIONS = {
 				name: "South Servery",
 				coords: { lat: 29.7152163, lon: -95.4011704 },
 				times: [
-					// MONDAY - FRIDAY
 					{
 						days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
 						start: "07:30",
@@ -626,17 +630,10 @@ const DEFAULT_LOCATIONS = {
 					},
 					{
 						days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-						start: "16:00",
-						end: "17:00",
-						topic: "Snack Period",
-					},
-					{
-						days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-						start: "17:30",
+						start: "17:00",
 						end: "21:00",
-						topic: "Extended Dinner",
+						topic: "Dinner",
 					},
-					// SATURDAY
 					{
 						days: ["Saturday"],
 						start: "08:00",
@@ -664,10 +661,63 @@ const DEFAULT_LOCATIONS = {
 				],
 			},
 			{
+				name: "South Main Servery",
+				coords: { lat: 29.71506957, lon: -95.39901576 },
+				times: [
+					{
+						days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+						start: "07:30",
+						end: "10:30",
+						topic: "Breakfast",
+					},
+					{
+						days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+						start: "11:30",
+						end: "13:30",
+						topic: "Lunch",
+					},
+					{
+						days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+						start: "16:00",
+						end: "17:00",
+						topic: "Snack",
+					},
+					{
+						days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+						start: "17:30",
+						end: "21:00",
+						topic: "Dinner",
+					},
+					{
+						days: ["Saturday", "Sunday"],
+						start: "08:00",
+						end: "11:00",
+						topic: "Breakfast",
+					},
+					{
+						days: ["Saturday", "Sunday"],
+						start: "11:30",
+						end: "14:00",
+						topic: "Lunch",
+					},
+					{
+						days: ["Saturday", "Sunday"],
+						start: "15:00",
+						end: "17:00",
+						topic: "Munch",
+					},
+					{
+						days: ["Saturday", "Sunday"],
+						start: "17:30",
+						end: "20:30",
+						topic: "Dinner",
+					},
+				],
+			},
+			{
 				name: "West Servery",
 				coords: { lat: 29.7210297, lon: -95.3985383 },
 				times: [
-					// MONDAY - FRIDAY
 					{
 						days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
 						start: "07:30",
@@ -687,15 +737,8 @@ const DEFAULT_LOCATIONS = {
 						topic: "Munch",
 					},
 					{
-						days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-						start: "16:00",
-						end: "17:00",
-						topic: "Snack Period",
-					},
-					// MONDAY - THURSDAY
-					{
 						days: ["Monday", "Tuesday", "Wednesday", "Thursday"],
-						start: "17:30",
+						start: "17:00",
 						end: "20:00",
 						topic: "Dinner",
 					},
@@ -703,36 +746,28 @@ const DEFAULT_LOCATIONS = {
 						days: ["Monday", "Tuesday", "Wednesday", "Thursday"],
 						start: "21:00",
 						end: "23:00",
-						topic: "Late Night Dining",
+						topic: "Late Night Dinner",
 					},
-					// FRIDAY
 					{
-						days: ["Friday"],
-						start: "17:30",
-						end: "21:00",
-						topic: "Dinner",
-					},
-					// SATURDAY
-					{
-						days: ["Saturday"],
+						days: ["Sunday"],
 						start: "08:00",
 						end: "11:00",
 						topic: "Breakfast",
 					},
 					{
-						days: ["Saturday"],
+						days: ["Sunday"],
 						start: "11:30",
 						end: "14:00",
 						topic: "Lunch",
 					},
 					{
-						days: ["Saturday"],
+						days: ["Sunday"],
 						start: "15:00",
 						end: "17:00",
 						topic: "Munch",
 					},
 					{
-						days: ["Saturday"],
+						days: ["Sunday"],
 						start: "17:30",
 						end: "20:30",
 						topic: "Dinner",
